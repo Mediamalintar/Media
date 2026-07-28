@@ -108,3 +108,45 @@ function handleEmailContact() {
     });
   }
 }
+
+// Animasi Menghitung Angka (Counter)
+const counters = document.querySelectorAll('.counter');
+let counterStarted = false;
+
+function startCounting() {
+  counters.forEach(counter => {
+    const target = +counter.getAttribute('data-target');
+    const duration = 1500; // Durasi animasi dalam milidetik (1.5 detik)
+    const stepTime = 30;   // Kecepatan pembaruan angka
+    const steps = duration / stepTime;
+    const increment = target / steps;
+    let current = 0;
+
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        counter.innerText = target + "+";
+        clearInterval(timer);
+      } else {
+        counter.innerText = Math.ceil(current) + "+";
+      }
+    }, stepTime);
+  });
+}
+
+// Menjalankan animasi angka HANYA saat bagian tersebut terlihat di layar
+const statsSection = document.querySelector('.counter')?.closest('.box');
+
+if (statsSection) {
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !counterStarted) {
+        counterStarted = true; // Mencegah animasi terulang berulang kali
+        startCounting();
+      }
+    });
+  }, { threshold: 0.5 });
+
+  statsObserver.observe(statsSection);
+}
+
