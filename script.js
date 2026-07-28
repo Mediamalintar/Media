@@ -58,32 +58,38 @@ const loader = document.getElementById("loader");
 const bar = document.querySelector(".progress-bar");
 const percent = document.getElementById("percent");
 
-let value = 0;
-
-const loading = setInterval(() => {
-
-  value++;
-
-  bar.style.width = value + "%";
-  percent.innerHTML = value + "%";
-
-  if (value >= 100) {
-
-    clearInterval(loading);
-
-    loader.style.transition = ".7s";
-
-    loader.style.transform = "translateY(-100%)";
-
-    loader.style.opacity = "0";
-
-    setTimeout(()=> {
-      loader.remove();
-    }, 700);
-
+// Jika sudah ada tanda pernah berkunjung, hapus elemen loader dari DOM
+if (sessionStorage.getItem("hasVisited")) {
+  if (loader) {
+    loader.remove();
   }
+} else {
+  // Jika belum, jalankan animasi seperti biasa
+  let value = 0;
 
-}, 20);
+  const loading = setInterval(() => {
+    value++;
+
+    if (bar) bar.style.width = value + "%";
+    if (percent) percent.innerHTML = value + "%";
+
+    if (value >= 100) {
+      clearInterval(loading);
+
+      // Simpan status bahwa halaman sudah pernah dibuka
+      sessionStorage.setItem("hasVisited", "true");
+
+      loader.style.transition = ".7s";
+      loader.style.transform = "translateY(-100%)";
+      loader.style.opacity = "0";
+
+      setTimeout(() => {
+        loader.remove();
+      }, 700);
+    }
+  }, 20);
+}
+
 
 function handleEmailContact() {
   const email = "multimediamankotablitar@gmail.com";
