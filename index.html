@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kelas Keterampilan Multimedia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="loader">
+      <div class="loader-box">
+        <img
+          src="images/logo.webp"
+          class="loader-logo"
+          alt="Logo"
+          onerror="this.src = 'https://via.placeholder.com/70'"
+        />
+        <h2>MULTIMEDIA</h2>
+        <p>Memuat Website...</p>
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
+        <span id="percent">0%</span>
+      </div>
+    </div>
+
+    <nav class="navbar">
+      <div class="logo-container">
+        <img
+          src="./images/logo.webp"
+          alt="Logo"
+          class="logo-img"
+          onerror="this.style.display = 'none'"
+        />
+        <span class="logo-text">MULTIMEDIA</span>
+      </div>
+
+      <button class="hamburger" id="hamburger-btn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <div class="menu" id="nav-menu">
+        <a href="#tentang">Layanan</a>
+        <a href="#portfolio">Tentang Kami</a>
+        <a href="#alasan">Portfolio</a>
+        <a href="#faq">faq</a>
+      </div>
+
+      <a href="#kontak" class="nav-contact-btn desktop-only">Contact us</a>
+    </nav>
+
+    <header class="hero box-animate">
+      <div class="hero-content">
+        <h1>Membantu Siswa Tampil Beda & Kreatif</h1>
+        <p>
+          Multimedia bisa mengubah ide biasa menjadi karya luar biasa. Belajar
+          desain, editing, dan animasi dari nol sampai bisa. Sebuah produk yang
+          hebat butuh marketing dan visual yang hebat. Mari kita mulai.
+        </p>
+        <a href="#faq" class="btn btn-primary">Let's Connect</a>
+      </div>
+      <div class="hero-image">
+        <div class="video-wrapper">
+          <video
+            class="hero-video"
+            src="./vidio/3.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+          ></video>
+
+          <div class="graphic-shapes">
+            <div class="shape-bulb"><i class="fa-solid fa-lightbulb"></i></div>
+            <div class="shape-gear"><i class="fa-solid fa-gear"></i></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="marquee-container box-animate">
+      <div class="marquee-content">
+        <span
+          >✦ Adobe Photoshop ✦ Adobe Illustrator ✦ Premiere Pro ✦ After Effects
+          ✦ HTML & CSS ✦ Webflow ✦ Relume ✦</span
+        >
+      </div>
+    </div>
+
+    <section class="large-cards-section box-animate">
+      <div class="grid-2">
+        <div class="card card-large bg-blue text-white">
+          <h2>Metodologi teruji yang diterapkan pada lebih dari 100+ siswa</h2>
+          <p>
+            Kami berspesialisasi dalam bekerja dengan siswa pemula hingga mahir.
+            Kami mendampingi secara langsung dan sangat berinvestasi pada
+            kesuksesan karya setiap siswa.
+          </p>
+          <a href="#kontak" class="btn btn-primary mt-auto">Let's Connect</a>
+        </div>
+
+        <div class="card card-large bg-pink">
+          <div class="stats-grid">
+            <div>
+              <h2 class="stat-number">
+                <span class="counter" data-target="100">0</span
+                ><span class="text-lime">+</span>
+              </h2>
+              <div class="stat-line"></div>
+              <p class="stat-label">Karya Siswa</p>
+            </div>
+            <div>
+              <h2 class="stat-number">
+                <span class="counter" data-target="20">0</span
+                ><span class="text-lime">x</span>
+              </h2>
+              <div class="stat-line"></div>
+              <p class="stat-label">Project Praktik</p>
+            </div>
+          </div>
+          <hr class="card-divider" />
+          <p class="small-text">
+            Kelas ini memberikan pengalaman langsung menggunakan software
+            industri. Tingkatkan produktivitas dan kredibilitas lewat portofolio
+            nyata yang siap digunakan untuk beasiswa atau dunia kerja.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="box-animate mt-section">
+      <h2 class="section-title">Portofolio Karya</h2>
+      <div class="grid">
+        <div class="card bg-white">
+          <video
+            class="portfolio-video"
+            src="./vidio/1.mp4"
+            muted
+            loop
+            playsinline
+            poster="https://via.placeholder.com/400x200?text=Video+Editing"
+          ></video>
+          <h3>Video Editing</h3>
+          <p>Cinematic Short Video, Vlog Editing, dan Commercial Ads.</p>
+        </div>
+        <div class="card bg-white">
+          <img
+            class="portfolio-img"
+            src="./images/1.jpg"
+            alt="Karya Desain Grafis"
+          />
+          <h3>Desain Grafis</h3>
+          <p>Poster, Logo, Banner, dan Asset Branding Media Sosial.</p>
+        </div>
+        <div class="card bg-white">
+          <video
+            class="portfolio-video"
+            src="./vidio/2.mp4"
+            muted
+            loop
+            playsinline
+            poster="https://via.placeholder.com/400x200?text=Animasi+%26+FX"
+          ></video>
+          <h3>Animasi & FX</h3>
+          <p>Motion Graphics, Animasi 2D, dan Visual Effects Sederhana.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="box-animate mt-section mb-section">
+      <h2 class="section-title">Pertanyaan Umum</h2>
+      <details class="faq-item">
+        <summary>Apakah harus punya laptop?</summary>
+        <p>
+          Tidak wajib, tetapi sangat disarankan agar proses belajar lebih
+          maksimal. Fasilitas sekolah juga dapat digunakan sesuai ketentuan.
+        </p>
+      </details>
+      <details class="faq-item">
+        <summary>Apakah belajar dari nol?</summary>
+        <p>
+          Ya. Seluruh materi dimulai dari dasar hingga mampu menghasilkan karya
+          multimedia secara mandiri.
+        </p>
+      </details>
+      <details class="faq-item">
+        <summary>Apakah ada proyek praktik?</summary>
+        <p>
+          Ada. Siswa akan mengerjakan berbagai proyek seperti desain grafis,
+          editing video, motion graphics, dan pembuatan website.
+        </p>
+      </details>
+    </section>
+
+    <footer id="kontak" class="box-animate">
+      <div class="contact-buttons">
+        <a
+          href="https://share.google/6ow7dxuxdIQPUTH8Y"
+          target="_blank"
+          class="btn btn-outline"
+        >
+          <i class="fa-solid fa-location-dot"></i> Lokasi
+        </a>
+        <a
+          href="https://www.instagram.com/media.malintar"
+          target="_blank"
+          class="btn btn-outline"
+        >
+          <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
+        <button
+          type="button"
+          onclick="handleEmailContact()"
+          class="btn btn-outline"
+        >
+          <i class="fa-solid fa-envelope"></i>
+          <span id="email-btn-text">Email Kami</span>
+        </button>
+        <a href="#" target="_blank" class="btn btn-primary">
+          <i class="fa-brands fa-google"></i> Google Form
+        </a>
+      </div>
+      <hr class="footer-divider" />
+      <p>
+        <strong
+          >Mewujudkan Generasi Kreatif, Inovatif, dan Siap Berkarya di Era
+          Digital.</strong
+        >
+      </p>
+      <small
+        >© 2026 Kelas Keterampilan Multimedia. Seluruh hak cipta
+        dilindungi.</small
+      >
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
